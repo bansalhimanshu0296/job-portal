@@ -1,0 +1,1 @@
+export const organizations = ["Google", "Amazon", "Figma", "Netflix", "Meta", "Microsoft", "Pinterest", "Slack", "Oracle", "Spotify", "Walmart"]
