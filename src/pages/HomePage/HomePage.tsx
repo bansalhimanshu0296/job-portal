@@ -3,6 +3,7 @@ import Organizations from "../../components/LandingPage/Organizations"
 import DreamJob from "../../components/LandingPage/DreamJob"
 import JobCategories from "../../components/LandingPage/JobCategories"
 import Working from "../../components/LandingPage/Working"
+import Testimonials from "../../components/LandingPage/Testimonials"
 
 const HomePage = () =>{
 
@@ -13,6 +14,7 @@ const HomePage = () =>{
             <Organizations />
             <JobCategories />
             <Working />
+            <Testimonials />
         </div>
     )
 }
