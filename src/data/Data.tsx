@@ -11,3 +11,15 @@ export const jobCategories = [
     { name: "Human Resource", desc: "Recruit, manage, and support company employees", jobs: "600" },
     { name: "Sales", desc: "Sell products and services to customers", jobs: "900" },
 ]
+export const work = [
+    {
+        name: "Build Your Resume",
+        desc: "Create a standout resume with your skills."
+    }, {
+        name: "Apply for Job",
+        desc: "Find and apply for jobs that match your skills."    
+    }, {
+        name: "Get Hired",
+        desc: "Connect with employers and start your new job."
+    }
+]
