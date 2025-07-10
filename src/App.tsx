@@ -41,11 +41,12 @@ function App() {
         '#3d3d3d',
         '#2d2d2d',
       ],
-    }
+    },
+    "fontFamily": "poppins, sans-serif"
   })
   return (
-    <MantineProvider theme={theme}>
-      <BrowserRouter className="min-h-[100vh] bg-mine-shaft-950 font-['poppins']">
+    <MantineProvider defaultColorScheme='dark' theme={theme}>
+      <BrowserRouter >
         <Header />
         <Routes>
           <Route path='/find-jobs' element={<FindJobs/>}/>
