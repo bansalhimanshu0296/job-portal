@@ -1,17 +1,22 @@
 import { Checkbox, Combobox, Group, Input, Pill, PillsInput, useCombobox } from "@mantine/core";
-import { IconSearch } from "@tabler/icons-react";
-import { useState } from "react";
+import { IconSelector, type Icon, type IconProps } from "@tabler/icons-react";
+import { useState, type ForwardRefExoticComponent, type RefAttributes } from "react";
 
-const groceries = ['🍎 Apples', '🍌 Bananas', '🥦 Broccoli', '🥕 Carrots', '🍫 Chocolate'];
 
-const MultiInput = () => {
+interface props {
+    icon: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
+    options: string[];
+    title: string;
+}
+
+const MultiInput = (props: props) => {
     const combobox = useCombobox({
         onDropdownClose: () => combobox.resetSelectedOption(),
         onDropdownOpen: () => combobox.updateSelectedOptionIndex('active')
     });
     const [search, setSearch] = useState('');
     const [value, setValue] = useState<string[]>([]);
-    const [data, setData] = useState(groceries);
+    const [data, setData] = useState<string[]>(props.options);
 
     const exactOptionMatch = data.some((item) => item === search);
 
@@ -55,12 +60,12 @@ const MultiInput = () => {
     return (
         <Combobox store={combobox} onOptionSubmit={handleValueSelect} withinPortal={false}>
             <Combobox.DropdownTarget>
-                <PillsInput variant="unstyled" rightSection={<Combobox.Chevron />}
+                <PillsInput variant="unstyled" rightSection={<IconSelector/>}
                     onClick={() => combobox.toggleDropdown()} leftSection={
                     <div
                         className="text-bright-sun-400 p-1 bg-mine-shaft-900
-                        rounded-full mr-1">
-                        <IconSearch />
+                        rounded-full mr-2">
+                        <props.icon />
                     </div>}>
                     <Pill.Group>
                         {
@@ -72,7 +77,7 @@ const MultiInput = () => {
                                     )}
                                 </>
                             ) : (
-                                <Input.Placeholder className="!text-mine-shaft-200">Job Title</Input.Placeholder>
+                                    <Input.Placeholder className="!text-mine-shaft-200">{props.title}</Input.Placeholder>
                             )
                         }    
                     </Pill.Group>
