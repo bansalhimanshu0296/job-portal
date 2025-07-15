@@ -23,8 +23,115 @@ const dropdownData = [
 
 const jobList = [
     {
-
-    }
+        jobTitle: "Frontend Developer",
+        company: "Google",
+        applicant: 154,
+        experience: "Intermediate",
+        jobType: "Full Time",
+        location: "Mountain View",
+        package: "$130k",
+        postedDaysAgo: 1,
+        description: "Build scalable web interfaces using React and TypeScript in a dynamic and inclusive environment. "
+      },
+      {
+        jobTitle: "Backend Engineer",
+        company: "Amazon",
+        applicant: 98,
+        experience: "Expert",
+        jobType: "Full Time",
+        location: "Seattle",
+        package: "$150k",
+        postedDaysAgo: 12,
+        description: "Work on distributed systems and REST APIs using Java, AWS, and microservices architecture."
+      },
+      {
+        jobTitle: "Full Stack Developer",
+        company: "Meta",
+        applicant: 72,
+        experience: "Entry Level",
+        jobType: "Contract",
+        location: "New York",
+        package: "$115k",
+        postedDaysAgo: 0,
+        description: "Develop full-stack applications with React, Node.js, and GraphQL to power social experiences."
+      },
+      {
+        jobTitle: "UI/UX Designer",
+        company: "Netflix",
+        applicant: 46,
+        experience: "Entry Level",
+        jobType: "Part Time",
+        location: "Los Angeles",
+        package: "$105k",
+        postedDaysAgo: 7,
+        description: "Create user-centric designs and prototypes that enhance the viewer experience across platforms."
+      },
+      {
+        jobTitle: "DevOps Engineer",
+        company: "Spotify",
+        applicant: 34,
+        experience: "Expert",
+        jobType: "Full Time",
+        location: "Boston",
+        package: "$160k",
+        postedDaysAgo: 30,
+        description: "Automate CI/CD pipelines, monitor cloud infrastructure, and ensure high availability at scale."
+      },
+      {
+        jobTitle: "Data Scientist",
+        company: "Apple",
+        applicant: 89,
+        experience: "Intermediate",
+        jobType: "Freelance",
+        location: "Cupertino",
+        package: "$140k",
+        postedDaysAgo: 2,
+        description: "Analyze user behavior and drive insights to improve product performance across Apple services."
+      },
+      {
+        jobTitle: "Machine Learning Engineer",
+        company: "Meta",
+        applicant: 57,
+        experience: "Expert",
+        jobType: "Full Time",
+        location: "San Francisco",
+        package: "$180k",
+        postedDaysAgo: 15,
+        description: "Design and deploy ML models for real-world applications with a focus on safety and scalability."
+      },
+      {
+        jobTitle: "Product Manager",
+        company: "Adobe",
+        applicant: 43,
+        experience: "Intermediate",
+        jobType: "Contract",
+        location: "San Jose",
+        package: "$145k",
+        postedDaysAgo: 5,
+        description: "Lead cross-functional teams to deliver innovative features for Adobe Creative Cloud users."
+      },
+      {
+        jobTitle: "QA Automation Engineer",
+        company: "Amazon",
+        applicant: 29,
+        experience: "Entry Level",
+        jobType: "Internship",
+        location: "Portland",
+        package: "$100k",
+        postedDaysAgo: 21,
+        description: "Write automated tests and ensure code quality in high-performance computing products."
+      },
+      {
+        jobTitle: "Cloud Solutions Architect",
+        company: "Microsoft",
+        applicant: 61,
+        experience: "Expert",
+        jobType: "Full Time",
+        location: "Redmond",
+        package: "$175k",
+        postedDaysAgo: 9,
+        description: "Design and deliver scalable Azure solutions for enterprise customers and internal teams."
+      }
 ];
 
 export { jobList, dropdownData };
