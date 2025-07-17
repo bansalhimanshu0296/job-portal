@@ -1,11 +1,11 @@
 import { Divider } from "@mantine/core"
-import SearchBar from "../../components/FindJobs/SearchBar"
+import SearchBar from "../../components/Common/SearchBar"
 import Jobs from "../../components/FindJobs/Jobs"
 
 const FindJobs = () => {
-    return <div className="min-h-[100vh] bg-mine-shaft-950 font-['poppins']">
+    return <div className="min-h-[90vh] bg-mine-shaft-950 font-['poppins']">
         <Divider size='xs' mx='md' />
-        <SearchBar />
+        <SearchBar isJobSearch={true} />
         <Divider size='xs' mx='md' />
         <Jobs />
         

@@ -1,13 +1,20 @@
 import { Divider, RangeSlider } from "@mantine/core"
 import { dropdownData } from "../../data/JobsData"
 import MultiInput from "./MultiInput"
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
-const SearchBar = () => {
+interface Props{
+    isJobSearch: boolean
+}
+
+const SearchBar = (props: Props) => {
     const [value, setValue] = useState<[number, number]>([80, 120]);
+
+    const SearchData = useMemo(() => props.isJobSearch ? dropdownData : dropdownData, [props.isJobSearch])
+
     return <div className="flex px-5 py-8">
         {
-            dropdownData.map((item, index) =><>
+            SearchData.map((item, index) =><>
                     <div key={ index } className="w-1/5">
                         <MultiInput {...item} />
                     </div>
