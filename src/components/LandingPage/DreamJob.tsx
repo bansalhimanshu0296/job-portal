@@ -24,8 +24,8 @@ const DreamJob = () => {
                         <div className="text-center mb-1 text-sm text-mine-shaft-100">10K+ got job</div>
                         <AvatarGroup>
                             <Avatar src="avatar.png" />
+                            <Avatar src="avatar1.png" />
                             <Avatar src="avatar2.png" />
-                            <Avatar src="avatar3.png" />
                             <Avatar>+9k</Avatar>
                         </AvatarGroup>
                     </div>
