@@ -1,13 +1,30 @@
-import { Divider, RangeSlider } from "@mantine/core"
+import { Divider, Input, RangeSlider } from "@mantine/core"
 import { dropdownData } from "../../data/JobsData"
 import MultiInput from "./MultiInput"
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { talentSearchFields } from "../../data/TalentData";
+import { IconUserCircle } from "@tabler/icons-react";
 
-const SearchBar = () => {
+interface Props{
+    isJobSearch: boolean
+}
+
+const SearchBar = (props: Props) => {
     const [value, setValue] = useState<[number, number]>([80, 120]);
-    return <div className="flex px-5 py-8">
+
+    const SearchData = useMemo(() => props.isJobSearch ? dropdownData : talentSearchFields, [props.isJobSearch])
+
+    return <div className="flex px-5 py-8 items-center !text-mine-shaft-100">
         {
-            dropdownData.map((item, index) =><>
+            !props.isJobSearch && <div className="flex items-center">
+                <div className="text-bright-sun-400 bg-mine-shaft-900 rounded-full p-1 mr-2">
+                    <IconUserCircle/>
+                </div>
+                <Input className="[&_input]:!placeholder-mine-shaft-200" variant="unstyled" placeholder="Talent Name" />
+            </div>
+        }
+        {
+            SearchData.map((item, index) =><>
                     <div key={ index } className="w-1/5">
                         <MultiInput {...item} />
                     </div>

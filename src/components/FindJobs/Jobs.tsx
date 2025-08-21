@@ -1,6 +1,6 @@
 import { jobList } from "../../data/JobsData";
 import JobCard from "./JobCard";
-import Sort from "./Sort";
+import Sort from "../Common/Sort";
 
 const Jobs = () => {
     return <div className="p-5">

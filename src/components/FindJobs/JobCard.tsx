@@ -14,7 +14,8 @@ interface JobCardData{
 }
 
 const JobCard = (props: JobCardData) => {
-    return <div className="bg-mine-shaft-900 p-4 w-80 flex flex-col gap-5 rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-mine-shaft-600">
+    return <div className="bg-mine-shaft-900 p-4 w-80 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-bright-sun-400 
+    transition duration-300 ease-in-out">
         <div className="flex justify-between">
             <div className="flex gap-2 items-center">
                 <div className="p-2 bg-mine-shaft-800 rounded-md">
@@ -41,7 +42,7 @@ const JobCard = (props: JobCardData) => {
             <div className="font-semibold text-mine-shaft-200">
                 {props.package}
             </div>
-            <div className="flex gap-1 text-xs items-center">
+            <div className="flex gap-1 text-xs items-center text-mine-shaft-400">
                 <IconClockHour3 className="h-5 w-5" stroke={1.5} /> {props.postedDaysAgo} days ago
             </div>
         </div>

@@ -87,9 +87,9 @@ const MultiInput = (props: props) => {
                 <Combobox.Search
                     value={search}
                     onChange={(event) => setSearch(event.currentTarget.value)}
-                    placeholder="Search Groceries"
+                    placeholder={`Search ${props.title}`}
                 />
-                <Combobox.Options>
+                <Combobox.Options mah="42vh" style={{overflowY: 'auto'}}>
                     {options}
                     {!exactOptionMatch && search.trim().length > 0 && (
                         <Combobox.Option value="$create">
