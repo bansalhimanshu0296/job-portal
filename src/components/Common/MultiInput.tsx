@@ -1,4 +1,4 @@
-import { Checkbox, Combobox, Group, Input, Pill, PillsInput, useCombobox } from "@mantine/core";
+import { Checkbox, Combobox, Group, Input, Pill, PillsInput, ScrollArea, useCombobox } from "@mantine/core";
 import { IconSelector, type Icon, type IconProps } from "@tabler/icons-react";
 import { useState, type ForwardRefExoticComponent, type RefAttributes } from "react";
 
@@ -89,19 +89,21 @@ const MultiInput = (props: props) => {
                     onChange={(event) => setSearch(event.currentTarget.value)}
                     placeholder={`Search ${props.title}`}
                 />
-                <Combobox.Options mah="42vh" style={{overflowY: 'auto'}}>
-                    {options}
-                    {!exactOptionMatch && search.trim().length > 0 && (
-                        <Combobox.Option value="$create">
-                            + Create {search}
-                        </Combobox.Option>
-                    )}
+                <Combobox.Options>
+                    <ScrollArea.Autosize mah={200} type="scroll">
+                        {options}
+                        {!exactOptionMatch && search.trim().length > 0 && (
+                            <Combobox.Option value="$create">
+                                + Create {search}
+                            </Combobox.Option>
+                        )}
 
-                    {exactOptionMatch && search.trim().length > 0 && options.length === 0 && (
-                        <Combobox.Empty>
-                            Nothing Found
-                        </Combobox.Empty>
-                    )}
+                        {exactOptionMatch && search.trim().length > 0 && options.length === 0 && (
+                            <Combobox.Empty>
+                                Nothing Found
+                            </Combobox.Empty>
+                            )}
+                    </ScrollArea.Autosize>
                 </Combobox.Options>
             </Combobox.Dropdown>
         </Combobox>
