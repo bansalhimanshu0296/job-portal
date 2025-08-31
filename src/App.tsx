@@ -11,8 +11,9 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import FindJobsPage from './pages/FindJobs/FindJobsPage';
 import FindTalentPage from './pages/FindTalent/FindTalentPage';
-import TalentProfiletPage from './pages/TalentProfile/TalentProfilePage';
+import TalentProfilePage from './pages/TalentProfile/TalentProfilePage';
 import PostJobPage from './pages/PostJob/PostJobPage';
+import JobDescPage from './pages/JobDesc/JobDescPage';
 
 function App() {
   
@@ -57,8 +58,9 @@ function App() {
         <Divider size="xs" mx="md"/>
         <Routes>
           <Route path='/find-jobs' element={<FindJobsPage />} />
+          <Route path='/job' element={<JobDescPage />} />
           <Route path='/find-talents' element={<FindTalentPage />} />
-          <Route path='/talent-profile' element={<TalentProfiletPage />} />
+          <Route path='/talent-profile' element={<TalentProfilePage />} />
           <Route path='/post-job' element={<PostJobPage />} />
           <Route path='*' element={<HomePage/>} />
         </Routes>
