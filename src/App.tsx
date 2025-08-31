@@ -14,6 +14,8 @@ import FindTalentPage from './pages/FindTalent/FindTalentPage';
 import TalentProfilePage from './pages/TalentProfile/TalentProfilePage';
 import PostJobPage from './pages/PostJob/PostJobPage';
 import JobDescPage from './pages/JobDesc/JobDescPage';
+import ApplyJobPage from './pages/ApplyJob/ApplyJobPage';
+import ScrollToTop from './components/Common/ScrollToTop';
 
 function App() {
   
@@ -54,6 +56,7 @@ function App() {
   return (
     <MantineProvider defaultColorScheme='dark' theme={theme}>
       <BrowserRouter >
+        <ScrollToTop />
         <Header />
         <Divider size="xs" mx="md"/>
         <Routes>
@@ -62,6 +65,7 @@ function App() {
           <Route path='/find-talents' element={<FindTalentPage />} />
           <Route path='/talent-profile' element={<TalentProfilePage />} />
           <Route path='/post-job' element={<PostJobPage />} />
+          <Route path="/apply-job" element={<ApplyJobPage />} />
           <Route path='*' element={<HomePage/>} />
         </Routes>
         <Footer />

@@ -1,16 +1,12 @@
-import { Button } from "@mantine/core";
-import { IconArrowLeft } from "@tabler/icons-react";
-import { Link } from "react-router";
 import Profile from "../../components/TalentProfile/Profile";
 import { profile } from "../../data/TalentData";
 import RecommendedSection from "../../components/Common/RecommendedSection";
+import BackButton from "../../components/Common/BackButton";
 
 const TalentProfilePage = () => {
     return (
         <div className="min-h-[90vh] bg-mine-shaft-950 font-['poppins'] p-4">
-            <Link className="my-4 inline-block" to="/find-talents">
-                <Button leftSection={<IconArrowLeft size={20} />} variant="light" color="brightSun.4">Back</Button>
-            </Link>
+            <BackButton toLink="/find-talents" />
             <div className="flex gap-5">
                 <Profile {...profile} />
                 <RecommendedSection isTalent={true} />
