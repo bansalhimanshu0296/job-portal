@@ -6,7 +6,7 @@ import { Link } from "react-router"
 const Header = () =>{
     return(
         <div className="w-full bg-mine-shaft-950 font-['poppins'] px-6 text-white h-20 flex justify-between items-center">
-            <Link to="/" className="flex gap-1 text-bright-sun-400">
+            <Link to="/" className="flex gap-1 text-bright-sun-450">
                 <IconAnchor className="h-8 w-8" stroke={2.5} />
                 <div className="text-3xl font-semibold">JobHook</div>
             </Link>

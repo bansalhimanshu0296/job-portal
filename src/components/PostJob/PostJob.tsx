@@ -21,7 +21,7 @@ const PostJob = () => {
                 )
             }
             <TagsInput label="Skills" placeholder="Enter Skill" splitChars={[",", " ", "|"]} clearable acceptValueOnBlur />
-            <div className="[&_button[data-active='true']]:!text-bright-sun-400 [&_button[data-active='true']]:!bg-bright-sun-400/20">
+            <div className="[&_button[data-active='true']]:!text-bright-sun-450 [&_button[data-active='true']]:!bg-bright-sun-450/20">
                 <div className="text-sm font-semibold">Job Description</div>
                 <TextEditor />
             </div>
