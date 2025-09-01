@@ -50,7 +50,7 @@ const Profile = (props: ProfileData) => {
             </div>
             <div className="flex flex-wrap gap-2">
                 {props?.skills?.map((skill, index) =>
-                    <div className="bg-bright-sun-300/15 text-sm font-medium rounded-3xl text-bright-sun-400 px-3 py-1" key={index}>
+                    <div className="bg-bright-sun-300/15 text-sm font-medium rounded-3xl text-bright-sun-450 px-3 py-1" key={index}>
                         {skill}
                     </div>
                 )}

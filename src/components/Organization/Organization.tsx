@@ -1,5 +1,8 @@
 import { Avatar, Divider, Tabs } from "@mantine/core"
 import { IconMapPin } from "@tabler/icons-react"
+import AboutOrg from "./AboutOrg"
+import OrgJobs from "./OrgJobs"
+import OrgEmployees from "./OrgEmployees"
 
 const Organization = () => {
     return <div className="w-3/4">
@@ -24,14 +27,14 @@ const Organization = () => {
         <Divider mx="xs" my="xl" />
         <div>
             <Tabs variant="outline" radius="lg" defaultValue="about">
-                <Tabs.List className="[&_button]:!text-lg font-semibold [&_button[data-active:'true']]:text-bright-sun-400">
+                <Tabs.List className="[&_button]:!text-lg font-semibold [&_button[data-active='true']]:!text-bright-sun-450">
                     <Tabs.Tab value="about">About</Tabs.Tab>
                     <Tabs.Tab value="jobs">Jobs</Tabs.Tab>
                     <Tabs.Tab value="employees">Employees</Tabs.Tab>
                 </Tabs.List>
-                <Tabs.Panel value="about">First panel</Tabs.Panel>
-                <Tabs.Panel value="jobs">Second panel</Tabs.Panel>
-                <Tabs.Panel value="employees">EMP panel</Tabs.Panel>
+                <Tabs.Panel value="about"><AboutOrg /></Tabs.Panel>
+                <Tabs.Panel value="jobs"><OrgJobs /></Tabs.Panel>
+                <Tabs.Panel value="employees"><OrgEmployees /></Tabs.Panel>
             </Tabs>
         </div>
     </div>

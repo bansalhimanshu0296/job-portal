@@ -21,7 +21,7 @@ const JobDesc = () => {
                 <Link to="/apply-job">
                     <Button color="brightSun.4" size="sm" variant="light">Apply</Button>
                 </Link>
-                <IconBookmark className="text-bright-sun-400 cursor-pointer" stroke={1.5}/>
+                <IconBookmark className="text-bright-sun-450 cursor-pointer" stroke={1.5}/>
             </div>
         </div>
         <Divider my='xl' />
@@ -53,7 +53,7 @@ const JobDesc = () => {
         </div>
         <Divider my='xl' />
         <div className="[&_h4]:text-xl [&_h4]:my-5 [&_h4]:font-semibold [&_*]:text-mine-shaft-300 [&_h4]:text-mine-shaft-200 [&_p]:text-justify 
-        [&_li]:marker:text-bright-sun-400 [&_li]:mb-1" dangerouslySetInnerHTML={{ __html: data }}>
+        [&_li]:marker:text-bright-sun-450 [&_li]:mb-1" dangerouslySetInnerHTML={{ __html: data }}>
         </div>
         <Divider my='xl' />
         <div>

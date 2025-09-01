@@ -1,4 +1,5 @@
 import BackButton from "../../components/Common/BackButton"
+import RecommendedSection from "../../components/Common/RecommendedSection"
 import Organization from "../../components/Organization/Organization"
 
 const OrganizationPage = () => {
@@ -7,6 +8,7 @@ const OrganizationPage = () => {
             <BackButton toLink=""/>
             <div className="flex gap-5">
                 <Organization />
+                <RecommendedSection isSimilarOrgs={true} />
             </div>
         </div>
     )    

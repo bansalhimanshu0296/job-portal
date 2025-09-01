@@ -14,7 +14,7 @@ interface JobCardData{
 }
 
 const TalentCard = (props: JobCardData) => {
-    return <div className="bg-mine-shaft-900 p-4 w-110 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-bright-sun-400
+    return <div className="bg-mine-shaft-900 p-4 w-110 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-bright-sun-450
     transition duration-300 ease-in-out">
         <div className="flex justify-between">
             <div className="flex gap-2 items-center">
@@ -28,7 +28,7 @@ const TalentCard = (props: JobCardData) => {
             </div>
             <IconHeart className="text-mine-shaft-300 cursor-pointer" />
         </div>
-        <div className="flex gap-2 [&>div]:py-1 [&>div]:px-2 [&>div]:bg-mine-shaft-800 [&>div]:text-bright-sun-400
+        <div className="flex gap-2 [&>div]:py-1 [&>div]:px-2 [&>div]:bg-mine-shaft-800 [&>div]:text-bright-sun-450
         [&>div]:rounded-lg text-xs">
             {
                 props?.topSkills?.map((skill, index) => <div key={index}>

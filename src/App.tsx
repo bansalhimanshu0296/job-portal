@@ -16,6 +16,7 @@ import PostJobPage from './pages/PostJob/PostJobPage';
 import JobDescPage from './pages/JobDesc/JobDescPage';
 import ApplyJobPage from './pages/ApplyJob/ApplyJobPage';
 import ScrollToTop from './components/Common/ScrollToTop';
+import OrganizationPage from './pages/OrganizationProfile/OrganizationPage';
 
 function App() {
   
@@ -67,6 +68,7 @@ function App() {
             <Route path='/talent-profile' element={<TalentProfilePage />} />
             <Route path='/post-job' element={<PostJobPage />} />
             <Route path="/apply-job" element={<ApplyJobPage />} />
+            <Route path="/organization-page" element={<OrganizationPage />} />
             <Route path='*' element={<HomePage/>} />
           </Routes>
           <Footer />

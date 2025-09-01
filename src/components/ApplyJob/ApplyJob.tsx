@@ -72,7 +72,7 @@ const ApplyJob = () => {
             </div>
         </div>
         <Notification icon={<IconCheck size={20} />} color="teal" title="Application Submitted!" mt="md" withCloseButton={false}
-            withBorder className={`!border-bright-sun-400 !fixed top-0 z-[1001] left-[35%] -translate-y-25 transition duration-300 ease-in-out
+            withBorder className={`!border-bright-sun-450 !fixed top-0 z-[1001] left-[35%] -translate-y-25 transition duration-300 ease-in-out
             ${submit ? "translate-y-0" : ""} `} >
             Redirecting to Find Jobs in {second} seconds...
         </Notification>
