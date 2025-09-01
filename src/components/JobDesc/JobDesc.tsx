@@ -57,7 +57,7 @@ const JobDesc = () => {
         </div>
         <Divider my='xl' />
         <div>
-            <div className="text-xl font-semibold mb-5">About Company</div>
+            <div className="text-xl font-semibold mb-5">About Organization</div>
             <div className="flex justify-between mb-3">
                 <div className="flex gap-2 items-center">
                     <div className="p-2 bg-mine-shaft-800 rounded-md">
@@ -68,8 +68,8 @@ const JobDesc = () => {
                         <div className="text-mine-shaft-300">10K+ Employees</div>
                     </div>
                 </div>
-                <Link to="/company-page">
-                    <Button color="brightSun.4" variant="light">Company Page</Button>
+                <Link to="/organization-page">
+                    <Button color="brightSun.4" variant="light">Organization Page</Button>
                 </Link>
             </div>
             <div className="text-mine-shaft-300 text-justify">

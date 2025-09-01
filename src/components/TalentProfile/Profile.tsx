@@ -6,7 +6,7 @@ import CertiCard, { type certificationData } from "./CertiCard"
 interface ProfileData{
     name: string;
     role: string;
-    company: string;
+    organization: string;
     location: string;
     about: string;
     skills: string[];
@@ -28,7 +28,7 @@ const Profile = (props: ProfileData) => {
             </div>
             <div className="text-xl flex gap-1 items-center">
                 <IconBriefcase className="h-5 w-5" stroke={1.5} />
-                {props?.role} &bull; {props?.company}
+                {props?.role} &bull; {props?.organization}
             </div>
             <div className="text-lg flex gap-1 items-center text-mine-shaft-300">
                 <IconMapPin className="h-5 w-5" stroke={1.5} /> {props?.location}    

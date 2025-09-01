@@ -8,7 +8,7 @@ export const jobCategories = [
     { name: "Customer Support", desc: "Assist customers with inquiries and issues", jobs: "1.2k" },
     { name: "Digital Marketing", desc: "Promote brands online with marketing strategies", jobs: "1k" },
     { name: "Finance", desc: "Manage financial records and transactions", jobs: "700" },
-    { name: "Human Resource", desc: "Recruit, manage, and support company employees", jobs: "600" },
+    { name: "Human Resource", desc: "Recruit, manage, and support organization employees", jobs: "600" },
     { name: "Sales", desc: "Sell products and services to customers", jobs: "900" },
 ]
 export const work = [
@@ -45,7 +45,7 @@ export const testimonials = [
 ]
 
 export const footerLinks = [
-    { title: "Product", links: ["Find Job", "Find Company", "Find Employee"] },
-    { title: "Company", links: ["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions"] },
+    { title: "Product", links: ["Find Job", "Find Organization", "Find Employee"] },
+    { title: "Organization", links: ["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions"] },
     { title: "Support", links: ["Help & Support", "Feedback", "FAQs"] }
 ]

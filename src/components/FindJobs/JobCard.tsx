@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 interface JobCardData{
     jobTitle: string;
-    company: string;
+    organization: string;
     applicant: number;
     experience: string;
     jobType: string;
@@ -20,11 +20,11 @@ const JobCard = (props: JobCardData) => {
         <div className="flex justify-between">
             <div className="flex gap-2 items-center">
                 <div className="p-2 bg-mine-shaft-800 rounded-md">
-                    <img className="h-7" src={`/icons/${props.company}.png`} alt = {props.company} />
+                    <img className="h-7" src={`/icons/${props.organization}.png`} alt = {props.organization} />
                 </div>
                 <div>
                     <div className="font-semibold">{props.jobTitle}</div>
-                    <div className="text-xs text-mine-shaft-300">{props.company} &#x2022; {props.applicant} Applicants</div>
+                    <div className="text-xs text-mine-shaft-300">{props.organization} &#x2022; {props.applicant} Applicants</div>
                 </div>
             </div>
             <IconBookmark className="text-mine-shaft-300 cursor-pointer" stroke={1.5}/>

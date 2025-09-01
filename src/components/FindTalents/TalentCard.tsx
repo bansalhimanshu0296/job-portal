@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 interface JobCardData{
     name: string;
-    company: string;
+    organization: string;
     role: string;
     topSkills: string[];
     image: string;
@@ -23,7 +23,7 @@ const TalentCard = (props: JobCardData) => {
                 </div>
                 <div>
                     <div className="font-semibold">{props?.name}</div>
-                    <div className="text-xs text-mine-shaft-300">{props?.role} &bull; {props?.company}</div>
+                    <div className="text-xs text-mine-shaft-300">{props?.role} &bull; {props?.organization}</div>
                 </div>
             </div>
             <IconHeart className="text-mine-shaft-300 cursor-pointer" />

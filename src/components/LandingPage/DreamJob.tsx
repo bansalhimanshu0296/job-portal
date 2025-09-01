@@ -6,7 +6,7 @@ const DreamJob = () => {
         <div className="flex items-center px-16 pt-16"> 
             <div className="flex flex-col w-[45%] gap-3">
                 <div className="text-6xl font-bold leading-tight text-mine-shaft-100 [&>span]:text-bright-sun-400">Find your <span>dream job </span>with us</div>
-                <div className="text-lg text-mine-shaft-200">Good Life begins with a good company. Start explore thousands of jobs in one place.</div>
+                <div className="text-lg text-mine-shaft-200">Good Life begins with a good organization. Start explore thousands of jobs in one place.</div>
                 <div className="flex gap-3 mt-5">
                     <TextInput className="bg-mine-shaft-900 rounded-lg p-1
                      px-2 text-mine-shaft-100 [&_input]:!text-mine-shaft-100"
