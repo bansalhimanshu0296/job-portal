@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   --color-mine-shaft-50: #f6f6f6;
   --color-mine-shaft-100: #e7e7e7;
   --color-mine-shaft-200: #d1d1d1;
@@ -16,7 +16,7 @@
   --color-bright-sun-100: #fff3c6;
   --color-bright-sun-200: #ffe588;
   --color-bright-sun-300: #ffd149;
-  --color-bright-sun-400: #ffbd20;
+  --color-bright-sun-450: #ffbd20;
   --color-bright-sun-500: #f99b07;
   --color-bright-sun-600: #dd7302;
   --color-bright-sun-700: #b75006;
@@ -31,17 +31,19 @@ body {
   min-height: 100vh;
 }
 
+@layer base {
 
-
-@layer base{
-  ul, ol{
+  ul,
+  ol {
     list-style: revert;
     font-size: medium;
   }
-  p{
+
+  p {
     font-size: medium;
   }
-  li{
+
+  li {
     margin-left: 1em;
   }
 }

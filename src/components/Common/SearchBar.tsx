@@ -17,7 +17,7 @@ const SearchBar = (props: Props) => {
     return <div className="flex px-5 py-8 items-center !text-mine-shaft-100">
         {
             !props.isJobSearch && <div className="flex items-center">
-                <div className="text-bright-sun-400 bg-mine-shaft-900 rounded-full p-1 mr-2">
+                <div className="text-bright-sun-450 bg-mine-shaft-900 rounded-full p-1 mr-2">
                     <IconUserCircle/>
                 </div>
                 <Input className="[&_input]:!placeholder-mine-shaft-200" variant="unstyled" placeholder="Talent Name" />

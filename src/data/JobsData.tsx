@@ -24,7 +24,7 @@ const dropdownData = [
 const jobList = [
     {
         jobTitle: "Frontend Developer",
-        company: "Google",
+        organization: "Google",
         applicant: 154,
         experience: "Intermediate",
         jobType: "Full Time",
@@ -35,7 +35,7 @@ const jobList = [
       },
       {
         jobTitle: "Backend Engineer",
-        company: "Amazon",
+        organization: "Amazon",
         applicant: 98,
         experience: "Expert",
         jobType: "Full Time",
@@ -46,7 +46,7 @@ const jobList = [
       },
       {
         jobTitle: "Full Stack Developer",
-        company: "Meta",
+        organization: "Meta",
         applicant: 72,
         experience: "Entry Level",
         jobType: "Contract",
@@ -57,7 +57,7 @@ const jobList = [
       },
       {
         jobTitle: "UI/UX Designer",
-        company: "Netflix",
+        organization: "Netflix",
         applicant: 46,
         experience: "Entry Level",
         jobType: "Part Time",
@@ -68,7 +68,7 @@ const jobList = [
       },
       {
         jobTitle: "DevOps Engineer",
-        company: "Spotify",
+        organization: "Spotify",
         applicant: 34,
         experience: "Expert",
         jobType: "Full Time",
@@ -79,7 +79,7 @@ const jobList = [
       },
       {
         jobTitle: "Data Scientist",
-        company: "Apple",
+        organization: "Apple",
         applicant: 89,
         experience: "Intermediate",
         jobType: "Freelance",
@@ -90,7 +90,7 @@ const jobList = [
       },
       {
         jobTitle: "Machine Learning Engineer",
-        company: "Meta",
+        organization: "Meta",
         applicant: 57,
         experience: "Expert",
         jobType: "Full Time",
@@ -101,7 +101,7 @@ const jobList = [
       },
       {
         jobTitle: "Product Manager",
-        company: "Adobe",
+        organization: "Adobe",
         applicant: 43,
         experience: "Intermediate",
         jobType: "Contract",
@@ -112,7 +112,7 @@ const jobList = [
       },
       {
         jobTitle: "QA Automation Engineer",
-        company: "Amazon",
+        organization: "Amazon",
         applicant: 29,
         experience: "Entry Level",
         jobType: "Internship",
@@ -123,7 +123,7 @@ const jobList = [
       },
       {
         jobTitle: "Cloud Solutions Architect",
-        company: "Microsoft",
+        organization: "Microsoft",
         applicant: 61,
         experience: "Expert",
         jobType: "Full Time",

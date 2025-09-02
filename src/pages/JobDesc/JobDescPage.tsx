@@ -8,7 +8,7 @@ const JobDescPage = () => {
             <BackButton toLink="/find-jobs" />
             <div className="flex gap-5 justify-around">
                 <JobDesc />
-                <RecommendedSection isTalent={false} />
+                <RecommendedSection isJobs />
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 export interface experienceData{
     title: string;
-    company: string;
+    organization: string;
     location: string;
     startDate: string;
     endDate: string;
@@ -12,11 +12,11 @@ const ExpCard = (props: experienceData) => {
         <div className="flex justify-between">
             <div className="flex gap-2 items-center">
                 <div className="p-2 bg-mine-shaft-800 rounded-md">
-                    <img className="h-7" src={`/icons/${props?.company}.png`} alt = {props?.company} />
+                    <img className="h-7" src={`/icons/${props?.organization}.png`} alt = {props?.organization} />
                 </div>
                 <div className="flex flex-col">
                     <div className="font-semibold">{props?.title}</div>
-                    <div className="text-sm text-mine-shaft-300">{props?.company} &bull; {props?.location}</div>
+                    <div className="text-sm text-mine-shaft-300">{props?.organization} &bull; {props?.location}</div>
                 </div>
             </div>
             <div className="text-sm text-mine-shaft-300">
