@@ -1,6 +1,6 @@
 import { Tabs } from "@mantine/core"
 import { jobList } from "../../data/JobsData"
-import JobCard from "../FindJobs/JobCard"
+import JobCard from "../Common/JobCard"
 
 const JobHistory = () => {
     return <div className="">

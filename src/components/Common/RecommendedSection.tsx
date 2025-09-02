@@ -1,7 +1,7 @@
 import { talents } from "../../data/TalentData"
-import TalentCard from "../FindTalents/TalentCard"
+import TalentCard from "./TalentCard"
 import { jobList } from "../../data/JobsData";
-import JobCard from "../FindJobs/JobCard";
+import JobCard from "./JobCard";
 import { similar } from "../../data/Organization";
 import OrgsCard from "../Organization/OrgsCard";
 

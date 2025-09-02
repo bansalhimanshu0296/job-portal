@@ -1,7 +1,7 @@
 import { Badge, Tabs } from "@mantine/core"
 import JobDesc from "../JobDesc/JobDesc"
 import { talents } from "../../data/TalentData"
-import TalentCard from "../FindTalents/TalentCard"
+import TalentCard from "../Common/TalentCard"
 
 const PostedJobDesc = () => {
     return <div className="mt-5 px-5 w-3/4">

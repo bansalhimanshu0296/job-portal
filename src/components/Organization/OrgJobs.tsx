@@ -1,5 +1,5 @@
 import { jobList } from "../../data/JobsData"
-import JobCard from "../FindJobs/JobCard"
+import JobCard from "../Common/JobCard"
 
 const OrgJobs = () => {
     return <div className="mt-10 flex flex-wrap gap-5">

@@ -1,6 +1,6 @@
 import { talents } from "../../data/TalentData";
 import Sort from "../Common/Sort";
-import TalentCard from "./TalentCard";
+import TalentCard from "../Common/TalentCard";
 
 const Talents = () => {
     return <div className="p-5">

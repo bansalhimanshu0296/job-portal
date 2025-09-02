@@ -1,5 +1,5 @@
 import { talents } from "../../data/TalentData"
-import TalentCard from "../FindTalents/TalentCard"
+import TalentCard from "../Common/TalentCard"
 
 
 const OrgEmployees = () => {
