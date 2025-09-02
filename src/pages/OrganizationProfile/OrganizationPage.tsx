@@ -8,7 +8,7 @@ const OrganizationPage = () => {
             <BackButton toLink=""/>
             <div className="flex gap-5">
                 <Organization />
-                <RecommendedSection isSimilarOrgs={true} />
+                <RecommendedSection isSimilarOrgs />
             </div>
         </div>
     )    

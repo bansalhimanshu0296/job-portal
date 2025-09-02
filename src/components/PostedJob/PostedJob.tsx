@@ -1,5 +1,5 @@
 import { Tabs } from "@mantine/core"
-import { activeJobs } from "../../data/PostedJob"
+import { activeJobs, drafts } from "../../data/PostedJob"
 import PostedJobCard from "./PostedJobCard"
 
 const PostedJob = () => {
@@ -8,8 +8,8 @@ const PostedJob = () => {
         <div>
             <Tabs autoContrast variant="pills" defaultValue="active">
                 <Tabs.List className="[&_button[aria-selected='false']]:!bg-mine-shaft-900 font-medium">
-                    <Tabs.Tab value="active">Active [4]</Tabs.Tab>
-                    <Tabs.Tab value="draft">Drafts [1]</Tabs.Tab>
+                    <Tabs.Tab value="active">Active [{activeJobs.length}]</Tabs.Tab>
+                    <Tabs.Tab value="draft">Drafts [{drafts.length}]</Tabs.Tab>
                 </Tabs.List>
                 <Tabs.Panel value="active">
                     <div className="flex flex-col gap-5 mt-5">
@@ -18,7 +18,13 @@ const PostedJob = () => {
                         }
                     </div>
                 </Tabs.Panel>
-                <Tabs.Panel value="draft">Second panel</Tabs.Panel>
+                <Tabs.Panel value="draft">
+                    <div className="flex flex-col gap-5 mt-5">
+                        {
+                            drafts.map((job, index)=><PostedJobCard key={index} {...job} />)
+                        }
+                    </div>
+                </Tabs.Panel>
             </Tabs>
         </div>
     </div>

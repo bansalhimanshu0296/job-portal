@@ -12,6 +12,7 @@
   "dependencies": {
     "@mantine/carousel": "^8.1.0",
     "@mantine/core": "^8.2.7",
+    "@mantine/dates": "^8.2.8",
     "@mantine/hooks": "^8.2.7",
     "@mantine/tiptap": "^8.2.7",
     "@tabler/icons-react": "^3.34.0",
@@ -24,6 +25,7 @@
     "@tiptap/pm": "^3.3.0",
     "@tiptap/react": "^3.3.0",
     "@tiptap/starter-kit": "^3.3.0",
+    "dayjs": "^1.11.18",
     "dompurify": "^3.2.6",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",

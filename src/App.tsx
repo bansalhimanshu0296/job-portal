@@ -3,6 +3,7 @@ import './App.css'
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
 import '@mantine/tiptap/styles.css';
+import '@mantine/dates/styles.css';
 import { createTheme, Divider, MantineProvider } from '@mantine/core';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router';
@@ -18,6 +19,7 @@ import ApplyJobPage from './pages/ApplyJob/ApplyJobPage';
 import ScrollToTop from './components/Common/ScrollToTop';
 import OrganizationPage from './pages/OrganizationProfile/OrganizationPage';
 import PostedJobPage from './pages/PostedJob/PostedJobPage';
+import JobHistoryPage from './pages/JobHistory/JobHistoryPage';
 
 function App() {
   
@@ -71,6 +73,7 @@ function App() {
             <Route path="/apply-job" element={<ApplyJobPage />} />
             <Route path="/organization-page" element={<OrganizationPage />} />
             <Route path="/posted-job" element={<PostedJobPage />} />
+            <Route path="/job-history" element={<JobHistoryPage />} />
             <Route path='*' element={<HomePage/>} />
           </Routes>
           <Footer />

@@ -4,12 +4,16 @@ import { Link } from "react-router"
 import { card, desc, skills } from "../../data/JobDescData"
 import DOMPurify from 'dompurify'
 
-const JobDesc = () => {
+interface JobDescData{
+    edit?: boolean;
+}
+
+const JobDesc = (props: JobDescData) => {
     const data = DOMPurify.sanitize(desc)
     return <div className="w-2/3">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
             <div className="flex gap-2 items-center">
-                <div className="p-2 bg-mine-shaft-800 rounded-md">
+                <div className="p-3 bg-mine-shaft-800 rounded-xl flex">
                     <img className="h-14" src={`/icons/Google.png`} alt="Google" />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -19,9 +23,12 @@ const JobDesc = () => {
             </div>
             <div className="flex flex-col gap-2 items-center">
                 <Link to="/apply-job">
-                    <Button color="brightSun.4" size="sm" variant="light">Apply</Button>
+                    <Button color="brightSun.4" size="sm" variant="light">{props?.edit ? "Edit" : "Apply"}</Button>
                 </Link>
-                <IconBookmark className="text-bright-sun-450 cursor-pointer" stroke={1.5}/>
+                {props?.edit ? <Button color="red.5" size="sm" variant="outline">Delete</Button> :
+                    <IconBookmark className="text-bright-sun-450 cursor-pointer" stroke={1.5}/>
+                }
+                
             </div>
         </div>
         <Divider my='xl' />

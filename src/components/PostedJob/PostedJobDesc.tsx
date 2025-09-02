@@ -1,5 +1,7 @@
 import { Badge, Tabs } from "@mantine/core"
 import JobDesc from "../JobDesc/JobDesc"
+import { talents } from "../../data/TalentData"
+import TalentCard from "../FindTalents/TalentCard"
 
 const PostedJobDesc = () => {
     return <div className="mt-5 px-5 w-3/4">
@@ -15,9 +17,25 @@ const PostedJobDesc = () => {
                     <Tabs.Tab value="applicants">Applicants</Tabs.Tab>
                     <Tabs.Tab value="invited">Invited</Tabs.Tab>
                 </Tabs.List>
-                <Tabs.Panel value="overview"><JobDesc /></Tabs.Panel>
-                <Tabs.Panel value="applicants">f</Tabs.Panel>
-                <Tabs.Panel value="invited">f</Tabs.Panel>
+                <Tabs.Panel value="overview" className="[&>div]:w-full [&>div]:mt-10">
+                    <JobDesc edit />
+                </Tabs.Panel>
+                <Tabs.Panel value="applicants">
+                    <div className="flex mt-10 flex-wrap gap-5 justify-around">
+                        {
+                            talents.map((talent, index) => index < 6 &&
+                                <TalentCard key={index} {...talent} posted />)
+                        }
+                    </div>
+                </Tabs.Panel>
+                <Tabs.Panel value="invited">
+                    <div className="flex mt-10 flex-wrap gap-5 justify-around">
+                        {
+                            talents.map((talent, index) => index < 6 &&
+                                <TalentCard key={index} {...talent} invited />)
+                        }
+                    </div>
+                </Tabs.Panel>
             </Tabs>
         </div>
     </div>

@@ -2,7 +2,7 @@ import { organizationData } from "../../data/Organization"
 
 const AboutOrg = () => {
     const organizationInfo: { [key: string]: any } = organizationData;
-    return <div className="flex flex-col gap-5">
+    return <div className="flex flex-col gap-5 mt-10">
         {
             Object.keys(organizationInfo).map((key, index) => key !== 'Name' && <div key={index}>
                 <div className="text-xl font-semibold mb-3">{key}</div>

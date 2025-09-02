@@ -9,7 +9,7 @@ const TalentProfilePage = () => {
             <BackButton toLink="/find-talents" />
             <div className="flex gap-5">
                 <Profile {...profile} />
-                <RecommendedSection isTalent={true} />
+                <RecommendedSection isTalent />
             </div>
         </div>
     )
