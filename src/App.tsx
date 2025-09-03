@@ -4,7 +4,7 @@ import './App.css'
 import '@mantine/core/styles.css';
 import '@mantine/tiptap/styles.css';
 import '@mantine/dates/styles.css';
-import { createTheme, Divider, MantineProvider } from '@mantine/core';
+import { createTheme, MantineProvider } from '@mantine/core';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import '@mantine/carousel/styles.css';
@@ -20,6 +20,7 @@ import ScrollToTop from './components/Common/ScrollToTop';
 import OrganizationPage from './pages/OrganizationProfile/OrganizationPage';
 import PostedJobPage from './pages/PostedJob/PostedJobPage';
 import JobHistoryPage from './pages/JobHistory/JobHistoryPage';
+import AuthenticationPage from './pages/Authentication/AuthenticationPage';
 
 function App() {
   
@@ -63,7 +64,6 @@ function App() {
         <ScrollToTop />
         <div className="relative">
           <Header />
-          <Divider size="xs" mx="md"/>
           <Routes>
             <Route path='/find-jobs' element={<FindJobsPage />} />
             <Route path='/job' element={<JobDescPage />} />
@@ -74,6 +74,8 @@ function App() {
             <Route path="/organization-page" element={<OrganizationPage />} />
             <Route path="/posted-job" element={<PostedJobPage />} />
             <Route path="/job-history" element={<JobHistoryPage />} />
+            <Route path="/signup" element={<AuthenticationPage />} />
+            <Route path="/login" element={<AuthenticationPage />} />
             <Route path='*' element={<HomePage/>} />
           </Routes>
           <Footer />
