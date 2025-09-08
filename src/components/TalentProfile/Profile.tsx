@@ -58,7 +58,7 @@ const Profile = (props: ProfileData) => {
         </div>
         <Divider mx="xs" my="xl" />
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-3">
+            <div className="text-2xl font-semibold mb-4">
                 Experience
             </div>
             <div className="flex flex-col gap-8">
@@ -69,7 +69,7 @@ const Profile = (props: ProfileData) => {
         </div>
         <Divider mx="xs" my="xl" />
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-3">
+            <div className="text-2xl font-semibold mb-4">
                 Certifications
             </div>
             <div className="flex flex-col gap-8">

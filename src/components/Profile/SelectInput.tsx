@@ -1,15 +1,20 @@
 import { Combobox, InputBase, ScrollArea, useCombobox } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import type { Icon, IconProps } from '@tabler/icons-react';
+import { useEffect, useState, type ForwardRefExoticComponent, type RefAttributes } from 'react';
 
 interface PostJobOption{
   options: string[];
   label: string;
   placeholder: string;
+  leftSection: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
+  value: string;
 }
 const SelectInput = (props: PostJobOption) => {
   useEffect(() => {
-    setData(props.options)
-  }, [])
+    setData(props.options);
+    setValue(props.value);
+    setSearch(props.value);
+  }, [props])
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
@@ -46,10 +51,10 @@ const SelectInput = (props: PostJobOption) => {
       }}
     >
       <Combobox.Target>
-        <InputBase 
-          className='= [&_input]:font-medium'
+        <InputBase
           withAsterisk
           label={props.label}
+          leftSection={<props.leftSection stroke={1.5} />}
           rightSection={<Combobox.Chevron />}
           value={search}
           onChange={(event) => {

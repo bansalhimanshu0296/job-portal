@@ -21,6 +21,7 @@ import OrganizationPage from './pages/OrganizationProfile/OrganizationPage';
 import PostedJobPage from './pages/PostedJob/PostedJobPage';
 import JobHistoryPage from './pages/JobHistory/JobHistoryPage';
 import AuthenticationPage from './pages/Authentication/AuthenticationPage';
+import ProfilePage from './pages/Profile/ProfilePage';
 
 function App() {
   
@@ -76,6 +77,7 @@ function App() {
             <Route path="/job-history" element={<JobHistoryPage />} />
             <Route path="/signup" element={<AuthenticationPage />} />
             <Route path="/login" element={<AuthenticationPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path='*' element={<HomePage/>} />
           </Routes>
           <Footer />

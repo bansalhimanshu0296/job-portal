@@ -1,7 +1,7 @@
 interface PostedJobInfo{
-    "jobTitle": string;
-    "location": string;
-    "posted": string;
+    jobTitle: string;
+    location: string;
+    posted: string;
 }
 
 const PostedJobCard = (props: PostedJobInfo) => {
