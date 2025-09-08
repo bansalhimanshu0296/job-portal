@@ -1,8 +1,10 @@
 import { IconAnchor, IconBrandFacebook, IconBrandInstagram, IconBrandX } from "@tabler/icons-react";
 import { footerLinks } from "../../data/Data";
+import { useLocation } from "react-router";
 
 const Footer = () => {
-    return <div className="pt-20 pb-5 flex gap-5 justify-around bg-mine-shaft-950 font-['poppins']">
+    const location = useLocation();
+    return location.pathname !== '/signup' && location.pathname !== '/login' && <div className="pt-20 pb-5 flex gap-5 justify-around bg-mine-shaft-950 font-['poppins']">
         <div className="w-1/4 flex flex-col gap-4">
             <div className="flex gap-1 items-center text-bright-sun-450">
                 <IconAnchor className="h-6 w-6" stroke={2.5} />

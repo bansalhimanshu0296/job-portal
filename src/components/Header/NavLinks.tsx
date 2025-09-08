@@ -7,6 +7,7 @@ const NavLinks = () => {
         { name: "Post Jobs", url: "/post-job" },
         { name: "Posted Jobs", url: "/posted-job" },
         { name: "Job History", url: "/job-history" },
+        { name: "SignUp", url: "/signup"}
     ]
     const location = useLocation();
     return (
