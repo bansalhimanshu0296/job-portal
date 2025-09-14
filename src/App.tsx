@@ -4,9 +4,11 @@ import './App.css'
 import '@mantine/core/styles.css';
 import '@mantine/tiptap/styles.css';
 import '@mantine/dates/styles.css';
+import '@mantine/notifications/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import { Notifications } from '@mantine/notifications';
 import '@mantine/carousel/styles.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -61,6 +63,7 @@ function App() {
   })
   return (
     <MantineProvider defaultColorScheme='dark' theme={theme}>
+      <Notifications position='top-center' zIndex={1000} />
       <BrowserRouter >
         <ScrollToTop />
         <div className="relative">

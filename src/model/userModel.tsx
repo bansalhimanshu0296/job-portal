@@ -6,6 +6,11 @@ export interface userInterface {
     confirmPassword: string;
 }
 
+export type registerValidationSchema = Omit<userInterface, 'accountType'>
+
+export type loginValidationSchema = Omit<userInterface,
+    'accountType' | 'name' | 'confirmPassword'>
+
 export interface registerAPIInterface{
     name: string;
     accountType: string;
