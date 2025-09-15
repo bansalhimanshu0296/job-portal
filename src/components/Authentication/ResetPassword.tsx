@@ -2,7 +2,7 @@ import { Button, Modal,  PasswordInput,  PinInput,  TextInput } from "@mantine/c
 import { IconAt, IconLock } from "@tabler/icons-react";
 import { useState } from "react";
 import { changePassword, sendOtp, verifyOtp } from "../../services/AuthenticationService";
-import signupValidation from "../../utils/signUpValidation";
+import signupValidation from "../../utils/signupValidation";
 import notificationComponent from "../Common/Notification";
 import { useInterval } from "@mantine/hooks";
 
