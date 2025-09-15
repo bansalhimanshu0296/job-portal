@@ -1,11 +1,13 @@
-import { Button, PasswordInput, rem, TextInput } from "@mantine/core"
-import { IconAt, IconCheck, IconLock, IconX } from "@tabler/icons-react"
+import { Button, PasswordInput, TextInput } from "@mantine/core"
+import { IconAt, IconLock } from "@tabler/icons-react"
 import { useState } from "react";
 import { useNavigate } from "react-router"
 import { defaultUser, tranformValueforLoginApi, type loginAPIInterface, type loginValidationSchema, type userInterface } from "../../model/userModel";
 import { loginUser } from "../../services/AuthenticationService";
 import loginValidation from "../../utils/loginValidation";
-import { notifications } from "@mantine/notifications";
+import { useDisclosure } from "@mantine/hooks";
+import ResetPassword from "./ResetPassword";
+import notificationComponent from "../Common/Notification";
 
 const Login = () => {
     const [user, setUser] = useState<userInterface>(defaultUser);
@@ -13,6 +15,8 @@ const Login = () => {
     const [formError, setFormError] = useState<loginValidationSchema>(defaultUser);
 
     const navigate = useNavigate();
+
+    const [opened, { open, close }] = useDisclosure(false);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement >) => {
         setUser({ ...user, [event?.target?.name]: event?.target?.value });
@@ -32,49 +36,40 @@ const Login = () => {
             const loginApiValue: loginAPIInterface = tranformValueforLoginApi(user);
             loginUser(loginApiValue).then(() => {
                 setUser(defaultUser);
-                notifications.show({
-                    title: 'Login Successful',
-                    message: 'Redirecting to home page...',
-                    icon: <IconCheck style={{ width: "90%", height: "90%" }} />,
-                    color: 'teal',
-                    withBorder: true,
-                    className: '!border-green-500'
-                });
-                setTimeout(()=>{
+                notificationComponent('Login Successful', 'Redirecting to home page...', true);
+                setTimeout(() => {
                     navigate("/")
                 }, 4000);
             }).catch((err) => {
-                notifications.show({
-                    title: 'Login Failed',
-                    message: err?.response?.data?.errorMessage ?? 'Some error occurred...' ,
-                    icon: <IconX style={{ width: "90%", height: "90%" }} />,
-                    color: 'red',
-                    withBorder: true,
-                    className: '!border-red-500'
-                });
-            })
+                notificationComponent('Login Failed', err?.response?.data?.errorMessage ?? 'Some error occurred...', false);
+            });
         }
     }
 
-    return <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
-        <div className="text-2xl font-semibold">Login</div>
-        <TextInput label="Your Email" placeholder="Your Email" value={user.emailId} name="emailId"
-            leftSection={<IconAt style={{ width: rem(16), height: rem(16) }} />} withAsterisk
-            onChange={handleChange} error={formError?.emailId}
-        />
-        <PasswordInput withAsterisk leftSection={<IconLock style={{ width: rem(18), height: rem(18) }} />}
-            label="Password" placeholder="Password" value={user.password} name="password" onChange={handleChange}
-            error={formError?.password}
-        />
-        <Button autoContrast variant="filled" onClick={handleLogin}>Login</Button>
-        <div className="mx-auto">Don't Have an account? <span onClick={() => {
-            navigate("/signup")
-            setUser(defaultUser);
-            setFormError(defaultUser);
-         }}
-            className="text-bright-sun-450 hover:underline">
-            SignUp</span></div>
-    </div>
+    return <>
+        <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
+            <div className="text-2xl font-semibold">Login</div>
+            <TextInput label="Email" placeholder="Your Email" value={user.emailId} name="emailId"
+                leftSection={<IconAt size={16} />} withAsterisk
+                onChange={handleChange} error={formError?.emailId}
+            />
+            <PasswordInput withAsterisk leftSection={<IconLock size={18} />}
+                label="Password" placeholder="Password" value={user.password} name="password" onChange={handleChange}
+                error={formError?.password}
+            />
+            <Button autoContrast variant="filled" onClick={handleLogin}>Login</Button>
+            <div className="mx-auto">Don't Have an account? <span onClick={() => {
+                navigate("/signup")
+                setUser(defaultUser);
+                setFormError(defaultUser);
+            }}
+                className="text-bright-sun-450 hover:underline cursor-pointer">
+                SignUp</span></div>
+            <div onClick={open} className="text-bright-sun-450 hover:underline cursor-pointer text-center">
+                Forget Password?</div>
+        </div>
+        <ResetPassword opened={opened} close={close} />
+    </>
 }
 
 export default Login

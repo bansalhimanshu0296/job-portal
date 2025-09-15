@@ -1,11 +1,11 @@
-import { Anchor, Button, Checkbox, Group, PasswordInput, Radio, rem, TextInput } from "@mantine/core"
-import { IconAt, IconCheck, IconLock, IconX } from "@tabler/icons-react"
+import { Anchor, Button, Checkbox, Group, PasswordInput, Radio, TextInput } from "@mantine/core"
+import { IconAt, IconLock } from "@tabler/icons-react"
 import { useState } from "react"
 import { useNavigate } from "react-router"
 import { defaultUser, tranformValueforRegisterApi, type registerAPIInterface, type registerValidationSchema, type userInterface } from "../../model/userModel"
 import { registerUser } from "../../services/AuthenticationService"
 import signupValidation from "../../utils/signUpValidation"
-import { notifications } from "@mantine/notifications"
+import notificationComponent from "../Common/Notification"
 
 const SignUp = () => {
     
@@ -63,27 +63,13 @@ const SignUp = () => {
             const registerApiValue: registerAPIInterface = tranformValueforRegisterApi(user);
             registerUser(registerApiValue).then(() => {
                 setUser(defaultUser);
-                notifications.show({
-                    title: 'Registered Successfully',
-                    message: 'Redirecting to login page...',
-                    icon: <IconCheck style={{ width: "90%", height: "90%" }} />,
-                    color: 'teal',
-                    withBorder: true,
-                    className: '!border-green-500'
-                });
-                setTimeout(()=>{
+                notificationComponent('Registered Successfully', 'Redirecting to login page...', false);
+                setTimeout(() => {
                     navigate("/login")
                 }, 4000);
             }).catch((err) => {
-                notifications.show({
-                    title: 'Registration Failed',
-                    message: err?.response?.data?.errorMessage ?? 'Some error occurred...' ,
-                    icon: <IconX style={{ width: "90%", height: "90%" }} />,
-                    color: 'red',
-                    withBorder: true,
-                    className: '!border-red-500'
-                });
-            })
+                notificationComponent('Registration Failed', err?.response?.data?.errorMessage ?? 'Some error occurred...', true);
+            });
         }
         
     }
@@ -92,14 +78,14 @@ const SignUp = () => {
         <div className="text-2xl font-semibold">Create Account</div>
         <TextInput label="Full Name" placeholder="Your Name" name="name" withAsterisk value={user.name}
             onChange={handleChange} error={formError.name} />
-        <TextInput label="Your Email" placeholder="Your Email"
-            leftSection={<IconAt style={{ width: rem(16), height: rem(16) }} />} withAsterisk value={user.emailId}
+        <TextInput label="Email" placeholder="Your Email"
+            leftSection={<IconAt size={16} />} withAsterisk value={user.emailId}
             onChange={handleChange} name="emailId" error={formError.emailId} />
-        <PasswordInput withAsterisk leftSection={<IconLock style={{ width: rem(18), height: rem(18) }} />}
+        <PasswordInput withAsterisk leftSection={<IconLock size={18} />}
             label="Password" placeholder="Password" value={user.password} onChange={handleChange} name="password"
             error={formError.password}
         />
-        <PasswordInput withAsterisk leftSection={<IconLock style={{ width: rem(18), height: rem(18) }} />}
+        <PasswordInput withAsterisk leftSection={<IconLock size={18} />}
             label="Confirm Password" placeholder="Confirm Password" value={user.confirmPassword} onChange={handleChange}
             name="confirmPassword" error={formError.confirmPassword}
         />
