@@ -3,7 +3,8 @@ import { IconArrowLeft } from "@tabler/icons-react";
 import { Link, useNavigate } from "react-router";
 
 interface BackButtonData{
-    toLink: string;
+  toLink: string;
+  label?: string;
 }
 const BackButton = (props: BackButtonData) => {
     const navigate = useNavigate()
@@ -15,7 +16,7 @@ const BackButton = (props: BackButtonData) => {
           my= {props?.toLink && "md"}  
           onClick={props?.toLink ? undefined : () => navigate(-1)}
         >
-          Back
+        {props?.label ?? "Back"}
         </Button>
       );
     
